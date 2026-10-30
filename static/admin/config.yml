@@ -25,6 +25,9 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 
+output:
+  omit_empty_optional_fields: true
+
 singletons:
   - name: "home"
     label: "Home"
@@ -92,7 +95,7 @@ singletons:
             fields:
               - { name: "label", label: "Label", widget: "string", required: false }
               - { name: "title", label: "Title", widget: "string" }
-              - { name: "text", label: "Text", widget: "text" }
+              - { name: "text", label: "Text", widget: "text", required: false }
               - { name: "type", label: "Type", widget: "string", required: false }
               - { name: "url", label: "URL", widget: "string", required: false }
               - { name: "image", label: "Image", widget: "image", required: false }
