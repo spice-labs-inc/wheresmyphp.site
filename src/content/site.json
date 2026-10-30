@@ -3,8 +3,11 @@
     {
       "type": "hero",
       "title": "Where’s My PHP?",
-      "body": "PHP2Shell is two critical flaws in PHP that let anyone run code on a web server without logging in, and attackers are already using them. Spice Labs Surveyor finds the vulnerable PHP binaries in the built software you run, with no source code needed.\n\n{{< youtube id=\"eBQLlPeMx6o\" title=\"Where’s my PHP? Surveyor OT Pro finds the PHP2Shell vulnerable PHP\" poster=\"/images/wheres-my-php-video.jpg\" docs-video=\"wheres-my-php\" >}}",
-      "cta": { "label": "Find your PHP", "url": "mailto:sales@spicelabs.io" }
+      "body": "PHP2Shell is two critical flaws in PHP that let anyone run code on a web server without logging in, and attackers are already using them. Spice Labs Surveyor finds the vulnerable PHP binaries in the built software you run, with no source code needed..\n\n{{< youtube id=\"\" title=\"\" poster=\"\" >}}",
+      "cta": {
+        "label": "Find your PHP",
+        "url": "mailto:sales@spicelabs.io"
+      }
     },
     {
       "type": "content",
@@ -85,7 +88,10 @@
       "type": "cta-band",
       "title": "Where’s your PHP?",
       "body": "Tell us what you run, and we’ll help you find the vulnerable PHP in it. Reporters covering PHP2Shell can reach us the same way.",
-      "cta": { "label": "Talk to us", "url": "mailto:sales@spicelabs.io" }
+      "cta": {
+        "label": "Talk to us",
+        "url": "mailto:sales@spicelabs.io"
+      }
     },
     {
       "type": "resources",
@@ -129,11 +135,26 @@
     }
   ],
   "footer_links": [
-    { "label": "Contact", "url": "mailto:sales@spicelabs.io" },
-    { "label": "Documentation", "url": "https://docs.spicelabs.io" },
-    { "label": "Blog", "url": "https://blog.spicelabs.io" },
-    { "label": "Privacy Policy", "url": "https://documents.spicelabs.io/privacy/" },
-    { "label": "Terms of Service", "url": "https://documents.spicelabs.io/terms/" }
+    {
+      "label": "Contact",
+      "url": "mailto:sales@spicelabs.io"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://docs.spicelabs.io"
+    },
+    {
+      "label": "Blog",
+      "url": "https://blog.spicelabs.io"
+    },
+    {
+      "label": "Privacy Policy",
+      "url": "https://documents.spicelabs.io/privacy/"
+    },
+    {
+      "label": "Terms of Service",
+      "url": "https://documents.spicelabs.io/terms/"
+    }
   ],
   "footer_text": "© 2026 Spice Labs, Inc. All rights reserved."
 }
