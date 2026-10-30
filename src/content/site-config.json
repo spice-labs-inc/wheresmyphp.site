@@ -1,0 +1,18 @@
+{
+  "site_name": "Where’s My PHP? Find the PHP2Shell vulnerable PHP | Spice Labs",
+  "brand_name": "Spice Labs",
+  "site_description": "Find the PHP binaries open to PHP2Shell, CVE-2026-109618 and CVE-2026-109619, in your VM disk images, backups, container images and firmware. Surveyor matches them by hash, with no source code.",
+  "keywords": "PHP2Shell, CVE-2026-109618, CVE-2026-109619, PHP RCE, PHP remote code execution, php-fpm vulnerability, mod_php vulnerability, php-cgi vulnerability, find vulnerable PHP, PHP binary hash, SBOM, Surveyor, Surveyor OT Pro, Spice Labs",
+  "site_url": "https://wheresmyphp.spicelabs.io",
+  "site_domain": "wheresmyphp.spicelabs.io",
+  "ga_measurement_id": "G-3EKZW6K925",
+  "video": {
+    "id": "eBQLlPeMx6o",
+    "docs_video": "wheres-my-php",
+    "name": "Where’s my PHP? Surveyor OT Pro finds the PHP2Shell vulnerable PHP",
+    "description": "Surveyor OT Pro sweeps three web server disk images on a machine with no network and finds the PHP binaries open to PHP2Shell, CVE-2026-109618 and CVE-2026-109619, by their hashes. It needs no source code.",
+    "upload_date": "2026-10-22",
+    "duration": "PT1M17S",
+    "thumbnail": "/images/wheres-my-php-video.jpg"
+  }
+}

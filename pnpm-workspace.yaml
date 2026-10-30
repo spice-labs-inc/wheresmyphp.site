@@ -1,0 +1,4 @@
+# pnpm 11 reads settings (overrides, allowBuilds, ...) from this file,
+# not from package.json's "pnpm" field. See the website repo for the same pattern.
+overrides:
+  rolldown: 1.2.14

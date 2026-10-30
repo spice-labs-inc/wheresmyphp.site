@@ -1,0 +1,107 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Sveltia CMS configuration. Edit copy in the browser at /admin.
+# The Home page is an ordered list of blocks (discriminated union, validated at
+# build by src/lib/content.ts). Custom markdown components (cover, figure,
+# youtube, embed) are registered in /admin/editor-components.js.
+# Site-wide values (site_name, brand_name, site_description, site_url,
+# site_domain) live in src/content/site-config.json, outside this editor.
+# Before first use: set backend.repo and base_url (see README.md).
+
+logo:
+  src: /logomark.svg
+
+backend:
+  name: "github"
+  repo: spice-labs-inc/wheresmyphp.site
+  branch: main
+  base_url: https://sveltia-cms-auth.spice-labs-inc.workers.dev
+
+media_folder: "static/images"
+public_folder: "/images"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+singletons:
+  - name: "home"
+    label: "Home"
+    file: "src/content/site.json"
+    fields:
+      - name: "blocks"
+        label: "Blocks"
+        widget: "list"
+        summary: "{{type}}"
+        fields:
+          - name: "type"
+            label: "Type"
+            widget: "select"
+            options:
+              - { label: "Hero", value: "hero" }
+              - { label: "Content", value: "content" }
+              - { label: "Steps", value: "steps" }
+              - { label: "Features (accordion)", value: "features" }
+              - { label: "Cards", value: "cards" }
+              - { label: "Quote", value: "quote" }
+              - { label: "Call to action band", value: "cta-band" }
+              - { label: "Resources", value: "resources" }
+
+          - name: "variant"
+            label: "Layout"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Default", value: "default" }
+              - { label: "Split (image right)", value: "split" }
+              - { label: "Reversed (image left)", value: "reversed" }
+              - { label: "Grid", value: "grid" }
+              - { label: "Centered", value: "center" }
+
+          - name: "title"
+            label: "Title"
+            widget: "string"
+            required: false
+
+          - name: "body"
+            label: "Body (markdown)"
+            widget: "markdown"
+            required: false
+            editor_components: [cover, figure, youtube, embed]
+
+          - name: "image"
+            label: "Image"
+            widget: "image"
+            required: false
+
+          - name: "cta"
+            label: "Call to action"
+            widget: "object"
+            required: false
+            collapsed: true
+            fields:
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "url", label: "URL", widget: "string" }
+
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { name: "label", label: "Label", widget: "string", required: false }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "text", label: "Text", widget: "text" }
+              - { name: "type", label: "Type", widget: "string", required: false }
+              - { name: "url", label: "URL", widget: "string", required: false }
+              - { name: "image", label: "Image", widget: "image", required: false }
+
+      - name: "footer_links"
+        label: "Footer Links"
+        widget: "list"
+        fields:
+          - { name: "label", label: "Label", widget: "string" }
+          - { name: "url", label: "URL", widget: "string" }
+
+      - { name: "footer_text", label: "Footer Text", widget: "string" }

@@ -1,0 +1,139 @@
+{
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "Where’s My PHP?",
+      "body": "PHP2Shell is two critical flaws in PHP that let anyone run code on a web server without logging in, and attackers are already using them. Spice Labs Surveyor finds the vulnerable PHP binaries in the built software you run, with no source code needed.\n\n{{< youtube id=\"eBQLlPeMx6o\" title=\"Where’s my PHP? Surveyor OT Pro finds the PHP2Shell vulnerable PHP\" poster=\"/images/wheres-my-php-video.jpg\" docs-video=\"wheres-my-php\" >}}",
+      "cta": { "label": "Find your PHP", "url": "mailto:sales@spicelabs.io" }
+    },
+    {
+      "type": "content",
+      "variant": "center",
+      "title": "Find every vulnerable copy of PHP",
+      "body": "PHP2Shell is two critical flaws in PHP, CVE-2026-109618 and CVE-2026-109619, each rated CVSS 9.2. Both allow unauthenticated remote code execution on any PHP that serves web requests: PHP-FPM, Apache mod_php, php-cgi, FrankenPHP and LiteSpeed. Exploitation began on October 17, 2026, before the flaws were disclosed, and it is now broad. The fixed releases are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, and the PHP team says only updating fully protects a server.\n\nLinux distributions often patch PHP without changing its version number, so a version check can mislead. The exact binary on disk is the evidence that settles it.\n\nIn the video, Surveyor OT Pro sweeps three web server disk images and finds the vulnerable PHP binaries. It matches the php, php-cgi, php-fpm and libphp binaries by hash against a list of known vulnerable builds. It needs no source code and runs on a machine with no network."
+    },
+    {
+      "type": "quote",
+      "body": "How long did it take you to find every vulnerable copy of PHP?"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "label": "Step 01",
+          "title": "Point Surveyor at what you run",
+          "text": "Give Surveyor the built software: VM disk images, backups, container images and firmware. It opens the file systems, archives and container images inside them.",
+          "image": "/images/Step01Php.png"
+        },
+        {
+          "label": "Step 02",
+          "title": "Record every file by its hash",
+          "text": "Surveyor maps each image down to its individual files. It records a hash for every file it finds, along with the path to that file inside the image.",
+          "image": "/images/Step02Php.png"
+        },
+        {
+          "label": "Step 03",
+          "title": "Search for the vulnerable builds",
+          "text": "Search Surveyor’s output for the hashes of known vulnerable php, php-cgi, php-fpm and libphp builds from the Linux distributions and FreeBSD. Every match names the image that carries one and where inside that image it sits.",
+          "image": "/images/Step03Php.png"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "variant": "center",
+      "title": "Check again as the fixes land",
+      "body": "Distributions are still shipping their fixed PHP builds, and the list of known vulnerable builds grows as more are checked. Surveyor’s record of every file stays on your machine, so checking again after each update is a quick search of the record you already have."
+    },
+    {
+      "type": "features",
+      "title": "Who needs to find the vulnerable PHP",
+      "items": [
+        {
+          "title": "Web and platform teams",
+          "text": "Every unpatched PHP that serves web requests is exposed, whether it runs under PHP-FPM, Apache mod_php, php-cgi, FrankenPHP or LiteSpeed. Surveyor finds the vulnerable builds in your VM disk images, backups and container images."
+        },
+        {
+          "title": "OT and embedded teams",
+          "text": "Network appliances, storage systems and industrial consoles often serve their web admin pages with PHP. Surveyor OT Pro reads their disk images and firmware on a machine with no network, and nothing leaves that machine."
+        },
+        {
+          "title": "Security leaders",
+          "text": "When a flaw is exploited before it is disclosed, the first question is which of your servers are affected. A search of Surveyor’s output answers it with a list you can act on."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Why Surveyor for finding vulnerable PHP",
+      "items": [
+        {
+          "title": "From the artifact itself",
+          "text": "Surveyor reads the built software, so it finds PHP in vendor images and backups as well as on your own servers. It needs no source code and no agent on the server."
+        },
+        {
+          "title": "The exact binary",
+          "text": "A version number can hide a distribution’s patch. Surveyor matches the php, php-cgi, php-fpm and libphp binaries by hash, across distributions and chip types."
+        },
+        {
+          "title": "Nothing leaves your machine",
+          "text": "Surveyor OT Pro runs on a machine with no network. Your images and results stay on the machine you run it on."
+        }
+      ]
+    },
+    {
+      "type": "cta-band",
+      "title": "Where’s your PHP?",
+      "body": "Tell us what you run, and we’ll help you find the vulnerable PHP in it. Reporters covering PHP2Shell can reach us the same way.",
+      "cta": { "label": "Talk to us", "url": "mailto:sales@spicelabs.io" }
+    },
+    {
+      "type": "resources",
+      "items": [
+        {
+          "title": "Surveyor OT Pro finds the PHP2Shell vulnerable PHP",
+          "type": "Video",
+          "url": "https://docs.spicelabs.io/docs/videos/wheres-my-php/youtube/"
+        },
+        {
+          "title": "PHP patches the PHP2Shell vulnerabilities, CVE-2026-109618 and CVE-2026-109619",
+          "type": "News",
+          "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/"
+        },
+        {
+          "title": "Amazon threat intelligence saw PHP2Shell exploited before public disclosure",
+          "type": "AWS",
+          "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+        },
+        {
+          "title": "PHP issues emergency patches for two critical flaws",
+          "type": "News",
+          "url": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html"
+        },
+        {
+          "title": "PHP announces a critical security release for two vulnerabilities",
+          "type": "Qualys",
+          "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities"
+        },
+        {
+          "title": "Disk images, containers and the other file types Surveyor reads",
+          "type": "Docs",
+          "url": "https://docs.spicelabs.io/docs/surveyor/supported-file-types/"
+        },
+        {
+          "title": "Your first offline survey with Surveyor OT Pro or Surveyor IT Pro",
+          "type": "Docs",
+          "url": "https://docs.spicelabs.io/docs/get-started/offline-first-survey/"
+        }
+      ]
+    }
+  ],
+  "footer_links": [
+    { "label": "Contact", "url": "mailto:sales@spicelabs.io" },
+    { "label": "Documentation", "url": "https://docs.spicelabs.io" },
+    { "label": "Blog", "url": "https://blog.spicelabs.io" },
+    { "label": "Privacy Policy", "url": "https://documents.spicelabs.io/privacy/" },
+    { "label": "Terms of Service", "url": "https://documents.spicelabs.io/terms/" }
+  ],
+  "footer_text": "© 2026 Spice Labs, Inc. All rights reserved."
+}

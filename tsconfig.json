@@ -1,0 +1,13 @@
+{
+  "extends": "$app/tsconfig",
+  "include": ["src", "tests", "*"],
+  "exclude": ["src/service-worker"],
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "paths": {
+      "#content/*": ["./src/content/*"],
+      "#lib/*": ["./src/lib/*"]
+    }
+  }
+}
