@@ -3,7 +3,7 @@
     {
       "type": "hero",
       "title": "Where’s My PHP?",
-      "body": "PHP2Shell is two critical flaws in PHP that let anyone run code on a web server without logging in, and attackers are already using them. Spice Labs Surveyor finds the vulnerable PHP binaries in the built software you run, with no source code needed..\n\n{{< youtube id=\"\" title=\"\" poster=\"\" >}}",
+      "body": "PHP2Shell is two critical flaws in PHP that let anyone run code on a web server without logging in, and attackers are already using them. Spice Labs Surveyor finds the vulnerable PHP binaries in the built software you run, with no source code needed.\n\n{{< youtube id=\"\" title=\"\" poster=\"\" >}}",
       "cta": {
         "label": "Find your PHP",
         "url": "mailto:sales@spicelabs.io"
